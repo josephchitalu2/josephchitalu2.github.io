@@ -4,6 +4,15 @@ Sophomore Cybersecurity Student @ UNILAS | Systems Engineer Intern @ Hope Channe
 
 Focused on building secure, resilient digital infrastructure, conducting rigorous penetration testing, and writing high-performance backend software frameworks.
 
+# Professional Engineering Portfolio 🌐
+**Secure Technical Showcase & System Portfolio**
+
+A fast, low-overhead static platform optimized for clean resource consumption, showcasing my engineering capabilities across network infrastructure, penetration testing, and software development.
+
+### 🛠️ Architecture & Core Deployment
+- **Frontend Frame:** Minimalist dark-themed architecture matching standard enterprise palettes (JetBrains styling guidelines).
+- **Hosting Infrastructure:** Configured for high-availability staging and hosted via static edge-routing nodes.
+- **Performance Focus:** Zero heavy runtime dependencies to prioritize fast loading on all hardware categories.
 ### 🛡️ Technical Focus Areas
 - **Network Engineering:** Secure routing/switching, infrastructure automation, network telemetry.
 - **Penetration Testing:** Vulnerability auditing, network scanning, privilege escalation tracking.
