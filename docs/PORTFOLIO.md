@@ -19,6 +19,8 @@ The site includes responsive navigation, section scrolling, scroll-based active 
 - Linked IMS directly to `josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-`.
 - Added Starbound Drift with a local play link and documentation link.
 - Removed a duplicated GitHub contact link.
+- Added explicit contact-field labels, named form fields, mobile-menu expanded state, keyboard focus styling and reduced-motion support.
+- Marked backup/restore and broader testing as future IMS work.
 - Replaced the fake contact-success alert with a mailto draft. The visitor still needs an email application and must send the draft themselves. No message is submitted by this site.
 
 ## File layout
