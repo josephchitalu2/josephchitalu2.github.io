@@ -1,0 +1,8 @@
+{
+  "name": "cyber-hygiene-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Firefox TLS inspector and opt-in k-anonymous password exposure checker",
+  "scripts": {"test": "node --test tests/*.test.cjs", "check": "node --check core.js && node --check background.js && node --check popup.js"},
+  "engines": {"node": ">=20"}
+}

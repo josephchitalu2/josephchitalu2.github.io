@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cyber Hygiene</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><div class="brand-icon" aria-hidden="true">◈</div><div><span class="eyebrow">YOUR EVERYDAY SECURITY COMPANION</span><h1>cyber<span>hygiene</span></h1></div><span class="version">0.1</span></header>
+<main>
+<nav aria-label="Tools"><button id="connection-tab" aria-pressed="true">Connection</button><button id="password-tab" aria-pressed="false">Password exposure</button></nav>
+<section id="connection-panel" aria-labelledby="connection-title">
+<div class="intro"><span class="eyebrow">KNOW YOUR CONNECTION</span><h2 id="connection-title">A closer look at TLS.</h2><p>Inspect the connection your browser actually negotiated.</p></div>
+<div class="status-card"><span class="pulse" aria-hidden="true"></span><div><strong id="connection-state">Checking current tab…</strong><p id="site">Please wait</p></div></div>
+<p id="connection-help" class="hint" role="status"></p>
+<button id="allow-site" class="primary" hidden>Allow inspection on this site</button><button id="reload-site" class="primary" hidden>Reload tab to inspect</button>
+<dl id="details" hidden></dl>
+<p class="note">TLS protects a connection. A valid certificate does not prove that a website is honest or safe.</p>
+</section>
+<section id="password-panel" aria-labelledby="password-title" hidden>
+<div class="intro"><span class="eyebrow">KEEP YOUR SECRETS LOCAL</span><h2 id="password-title">Has it been exposed?</h2><p>Check the Pwned Passwords dataset with a hash prefix.</p></div>
+<div class="privacy-card"><strong>Local hash. Limited disclosure.</strong><p>Only the first 5 characters of a SHA-1 hash leave this popup. The service can still see your IP address and request timing.</p></div>
+<button id="enable-check" class="primary">Enable optional exposure checks</button>
+<form id="password-form" hidden><label for="password">Password to check</label><div class="input-wrap"><input id="password" type="password" autocomplete="off" spellcheck="false" autocapitalize="none" required maxlength="4096"><button id="reveal" type="button" aria-pressed="false" aria-label="Show password">Show</button></div><button id="check" class="primary" type="submit">Check exposure</button></form>
+<p id="password-result" role="status" aria-live="polite" class="result">Checks are optional. No passwords are read from websites.</p>
+<p class="note">Nothing is stored. No typing is sent. A missing match is not a guarantee of strength or safety.</p>
+</section>
+<footer><span>Built by Joseph Chitalu</span><button id="reset" class="text-button">Reset access</button></footer>
+<p id="error" role="alert" hidden></p>
+</main><script src="core.js"></script><script src="popup.js"></script></body></html>
