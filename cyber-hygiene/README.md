@@ -31,3 +31,6 @@ JavaScript syntax and functional checks cover login/guest routes, lesson complet
 
 ## Account and motion update
 Added sign-up/password confirmation, username uniqueness, local account selection, password visibility controls, per-profile progress and risk storage, and guest/logout switching. Soft entrance transitions and slowly drifting glows respect reduced-motion settings. Account tests cover validation, correct/incorrect passwords, random salts, duplicate names, no plaintext credential storage, and profile isolation.
+
+## Navigation
+Workspace navigation is inside a native dialog drawer on desktop and mobile. Use the Menu button to open it. Navigation, outside clicks, the close button and Escape dismiss it. Native dialog behaviour supplies focus containment and return. Reduced-motion settings disable entrance animation.

@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f172a"><meta name="description" content="Cyber Hygiene helps students recognise scams and build safer digital habits through short lessons and realistic challenges."><title>Cyber Hygiene — Your digital life, protected</title><link rel="stylesheet" href="style.css?v=5"><link rel="stylesheet" href="fonts.css?v=5"><link rel="stylesheet" href="figma.css?v=5"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f172a"><meta name="description" content="Cyber Hygiene helps students recognise scams and build safer digital habits through short lessons and realistic challenges."><title>Cyber Hygiene — Your digital life, protected</title><link rel="stylesheet" href="style.css?v=6"><link rel="stylesheet" href="fonts.css?v=6"><link rel="stylesheet" href="figma.css?v=6"></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<dialog id="workspace-menu" class="workspace-dialog" aria-label="Workspace menu">
 <aside class="sidebar">
+<div class="drawerheading"><span>YOUR WORKSPACE</span><button type="button" class="drawerclose" data-menu-close aria-label="Close workspace menu">×</button></div>
 <a class="brand" href="#home"><img class="brandshield" src="assets/figma/dashboard-0cfbd.svg" alt="" width="22" height="22"><span>cyber<span class="mint">hygiene</span><small>PLATFORM</small></span></a>
 <div class="navlabel">YOUR WORKSPACE</div>
 <nav aria-label="Main navigation">
@@ -19,13 +21,15 @@
 </nav>
 <div class="sidebottom"><button class="btn logoutbtn" data-logout>LOG OUT</button><div class="safetip"><span class="mint">✦ DAILY REMINDER</span><p>A familiar name doesn’t always mean a safe message.</p></div><a href="#account" class="profile"><span class="avatar" id="avatar">A</span><span id="profilename">Alex<small>Student workspace</small></span><span>↗</span></a></div>
 </aside>
+</dialog>
 <div class="shell">
-<header class="topbar"><div><span class="live"></span> A little awareness goes a long way</div><a href="#account" class="topprofile">My profile ↗</a></header>
+<header class="topbar"><button type="button" id="menu-toggle" class="menutoggle" aria-controls="workspace-menu" aria-expanded="false" aria-haspopup="dialog"><span aria-hidden="true">☰</span> Menu</button><div class="topbarhint"><span class="live"></span> A little awareness goes a long way</div><a href="#account" class="topprofile">My profile ↗</a></header>
 <main id="main" tabindex="-1"><noscript><h1>Cyber Hygiene</h1><p>Learn to recognise scams and build safer digital habits. Enable JavaScript to explore lessons and challenges. No sign-up is required.</p></noscript></main>
 <footer>Cyber Hygiene <span>Made for campus. Useful everywhere.</span><button class="textbtn" id="aboutbtn">About this demo</button></footer>
 </div>
 <dialog id="modal"><button class="modalclose" aria-label="Close dialog">×</button><div id="modalbody"></div></dialog>
 <div class="toast" role="status" id="toast"></div>
-<script src="accounts.js?v=5"></script>
-<script src="app.js?v=5"></script>
+<script src="accounts.js?v=6"></script>
+<script src="app.js?v=6"></script>
+<script src="menu.js?v=6"></script>
 </body></html>
