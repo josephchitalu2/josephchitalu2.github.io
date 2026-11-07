@@ -13,8 +13,8 @@ test('guest view, separate master unlock and CRUD screens work through UI events
  const s=setup();s.ui.mount(s.root,null);assert.match(s.root.innerHTML,/Sign in to a local account/);
  s.ui.mount(s.root,{id:'alice',name:'Alice'});assert.match(s.root.innerHTML,/Create your vault/);
  await s.submit('vault-unlock-form',{master:'fictional-master-passphrase',confirm:'different-passphrase',understood:'on'});assert.match(s.root.querySelector('#vault-error').textContent,/do not match/);
- await s.submit('vault-unlock-form',{master:'fictional-master-passphrase',confirm:'fictional-master-passphrase',understood:'on'});assert.match(s.root.innerHTML,/No credentials yet/);
- await s.click('new');assert.match(s.root.innerHTML,/Add password/);
+ await s.submit('vault-unlock-form',{master:'fictional-master-passphrase',confirm:'fictional-master-passphrase',understood:'on'});assert.match(s.root.innerHTML,/No saved passwords yet/);
+ await s.click('new');assert.match(s.root.innerHTML,/Add account password/);
  await s.submit('vault-entry-form',{title:'<img src=x>',username:'fictional',password:'fake-secret',url:'https://example.com',favorite:'on'});
  assert.match(s.root.innerHTML,/&lt;img src=x&gt;/);assert.ok(!s.root.innerHTML.includes('fake-secret'));
  await s.click('tab',{mode:'generator'});assert.match(s.root.innerHTML,/Password generator/);
@@ -31,4 +31,17 @@ test('hidden tab, inactivity, page departure and account switching lock the vaul
  await s.submit('vault-unlock-form',{master:'fictional-master-passphrase'});s.ui.detach();s.ui.mount(s.root,user);assert.match(s.root.innerHTML,/Unlock your vault/);
  await s.submit('vault-unlock-form',{master:'fictional-master-passphrase'});s.ui.mount(s.root,{id:'bob',name:'Bob'});assert.match(s.root.innerHTML,/Create your vault/);
  s.ui.mount(s.root,user);assert.match(s.root.innerHTML,/Unlock your vault/);
+});
+
+test('Add account preserves its destination for guests and opens entry form after vault setup',async()=>{
+ const s=setup();s.ui.mount(s.root,null,true);
+ assert.match(s.root.innerHTML,/href="#signin\/password-manager\/add"/);
+ assert.match(s.root.innerHTML,/href="#signup\/password-manager\/add"/);
+ s.ui.mount(s.root,{id:'alice',name:'Alice'},true);
+ await s.submit('vault-unlock-form',{master:'fictional-master-passphrase',confirm:'fictional-master-passphrase',understood:'on'});
+ assert.match(s.root.innerHTML,/id="vault-entry-form"/);
+ await s.submit('vault-entry-form',{title:'Student portal',username:'student',password:'fictional-entry',url:'https://example.com'});
+ assert.match(s.root.innerHTML,/Saved passwords/);assert.match(s.root.innerHTML,/Student portal/);
+ s.ui.mount(s.root,{id:'alice',name:'Alice'},true);assert.match(s.root.innerHTML,/id="vault-entry-form"/);
+ s.ctx.location.hash='#password-manager/add';s.ui.lock();assert.match(s.root.innerHTML,/Unlock your vault/);
 });

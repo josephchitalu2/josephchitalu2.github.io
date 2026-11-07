@@ -26,3 +26,28 @@ test('all local script and stylesheet references exist',()=>{
  const html=fs.readFileSync(path.join(dir,'index.html'),'utf8');
  for(const [,asset] of html.matchAll(/(?:src|href)="([^"#][^"]*\.(?:js|css)(?:\?[^\"]*)?)"/g))assert.ok(fs.existsSync(path.join(dir,asset.split('?')[0])),asset);
 });
+
+test('profile offers password storage and Add account opens a vault entry, not platform registration',()=>{
+ const a=app();a.run("location.hash='#account';render()");
+ assert.match(a.elements['#main'].innerHTML,/Password storage/);
+ assert.match(a.elements['#main'].innerHTML,/href="#password-manager\/add">＋ Add account/);
+ a.run("location.hash='#signup/password-manager/add'");assert.equal(a.run('authDestination()'),'password-manager/add');
+ assert.equal(a.run("authLink('signin')"),'#signin/password-manager/add');
+ a.run("location.hash='#signin/password-manager/add'");assert.equal(a.run("authLink('signup')"),'#signup/password-manager/add');
+ a.run("location.hash='#signin/https:evil'");assert.equal(a.run('authDestination()'),'dashboard');
+});
+
+test('successful sign-in and registration return to the requested password entry form',async()=>{
+ for(const formId of ['signinform','signupform']){
+  const a=app();let hash='#'+(formId==='signinform'?'signin':'signup')+'/password-manager/add';
+  Object.defineProperty(a.ctx.location,'hash',{get:()=>hash,set:v=>{hash=v.startsWith('#')?v:'#'+v;}});
+  a.ctx.FormData=class{get(){return 'fictional';}};
+  a.ctx.CyberAccounts={authenticate:async()=>({id:'alice',name:'Alice'}),register:async()=>({id:'alice',name:'Alice'})};
+  let mounted;
+  a.ctx.CyberVaultUI.mount=(node,user,add)=>{mounted={user,add};};
+  a.ctx.localStorage.setItem=()=>{};
+  a.ctx.form={id:formId,querySelector:()=>({textContent:'Submit',isConnected:true}),reset(){}};
+  await a.run('submitAccount(form)');
+  assert.equal(hash,'#password-manager/add');assert.equal(mounted.user.id,'alice');assert.equal(mounted.add,true);
+ }
+});
