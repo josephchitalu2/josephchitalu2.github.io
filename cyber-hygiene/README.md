@@ -47,3 +47,11 @@ Workspace navigation is inside a native dialog drawer on desktop and mobile. Use
 Run the vault tests with `node --test tests/*.test.cjs`. No package install is required. Browser-local account credentials and learning data use separate storage from encrypted vault entries. Sign-in does not unlock the vault. Hiding the tab, leaving the vault page, switching accounts or logging out locks it; the default inactivity timeout is five minutes.
 
 A forgotten master passphrase cannot be recovered. Clearing browser data destroys the vault. There is no backup export/restore, autofill, biometrics or TOTP implementation. Copying passwords puts them on the system clipboard, outside vault protection. All scripts on the shared GitHub Pages origin remain within the browser security boundary; encryption does not protect an unlocked page from malicious code or a compromised device.
+
+### Password storage navigation
+
+My Account → Password storage → Add account opens the Password Manager entry form. View saved passwords opens the vault list. Creating another Cyber Hygiene profile is a separately labelled action.
+
+Guests sign in or create a profile first, then return to the requested vault page. On Add account, creating or unlocking the vault continues to the entry form. Saving stores the encrypted entry and shows it in Saved passwords.
+
+Reference: FigJam board `OabUufhV1iTMtqRSXBPXuP`, password-manager Must have sticky `175:974` (encrypted storage, master password, CRUD, view/copy, auto-lock). Figma design `9TESNt9v6DWKsO8kauvMdC` was reviewed for the existing account/navigation structure. Jira and Miro content has not been reviewed in this change.
