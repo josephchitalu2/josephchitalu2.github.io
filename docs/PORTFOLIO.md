@@ -1,42 +1,43 @@
-# Joseph Chitalu portfolio
+# Portfolio maintenance
 
-## Contents and running
+## Structure
 
-`index.html` is a static HTML/CSS/JavaScript portfolio. Open locally in Firefox, or serve the folder:
+The root `index.html` is the personal portfolio. Buildless projects are served from subdirectories; their HTML, scripts, styles and assets must retain their relative paths. There is no server-side application here.
 
-```bash
-python3 -m http.server 8000
-```
+| Content | Source |
+| --- | --- |
+| Profile, experience, skills, project cards and contact | `index.html` |
+| Cyber Hygiene | `cyber-hygiene/` |
+| Firefox companion | `cyber-hygiene-extension/` |
+| Power simulator | `zesco-load-track/` |
+| Space game | `games/starbound-drift/index.html` |
+| Downloadable IMS snapshot | `downloads/ims.py` |
 
-Then visit http://localhost:8000 . No Python backend is required for the site itself. The local server is for previewing static files, not production hosting.
+## Preview and checks
 
-The site includes responsive navigation, section scrolling, scroll-based active links and intersection-triggered card reveals. It is designed around the uploaded dark theme.
+Serve the repository root using the command in [README](../README.md), then follow [TESTING](TESTING.md). The contact form opens a `mailto:` draft in the visitor's email application; the visitor must send it. There is no email-delivery backend.
 
-## Prepared changes
+## Deployment
 
-- Corrected the IMS project badge from v4.0 to the source's v5.0.
-- Replaced the unsupported CSV backup/restore claim with CSV reporting and actual implemented features.
-- Linked IMS directly to `josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-`.
-- Added Starbound Drift with a local play link and documentation link.
-- Removed a duplicated GitHub contact link.
-- Added explicit contact-field labels, named form fields, mobile-menu expanded state, keyboard focus styling and reduced-motion support.
-- Marked backup/restore and broader testing as future IMS work.
-- Replaced the fake contact-success alert with a mailto draft. The visitor still needs an email application and must send the draft themselves. No message is submitted by this site.
+The site is published through GitHub Pages. The password-manager update in PR #3 was merged and its Pages build completed successfully on 7 November 2026. Before changing publishing settings, inspect Settings → Pages rather than assuming a branch or folder.
 
-## File layout
+1. Make a focused branch and run the documented checks.
+2. Open a pull request describing behaviour, validation and limitations.
+3. Merge after review and watch the **pages build and deployment** Actions run.
+4. Check the public portfolio and changed project paths after it succeeds.
 
-- `index.html`: portfolio entry page.
-- `games/starbound-drift/index.html`: playable game.
-- `downloads/ims.py`: supplied IMS source for download.
-- `docs/PORTFOLIO.md`: this document.
-- `docs/STARBOUND_DRIFT.md`: game documentation.
+A browser can retain old assets. Bump query-string asset versions when changing the buildless Cyber Hygiene scripts, and use a hard refresh for verification. Never clear site data as a routine update step: it contains users' local records and vaults.
 
-## Deployment and review
+## Distribution copies
 
-This folder is prepared for the existing GitHub Pages repository. The inspected main branch contained only README.md before this update. GitHub reports Pages is enabled; its precise publishing branch/source settings remain unverified. The publishing helper creates a review branch and pull request, not a merge. Inspect the diff and existing Pages configuration before merging. Standard branch-based Pages can serve this tree from the repository root; other build workflows may need adaptation.
+`downloads/ims.py` is a snapshot of the separate IMS repository, not an independent source of truth. Update it deliberately when the canonical IMS source changes. Regenerate `downloads/cyber-hygiene-extension.zip` when changing distributed extension files; compare its contents with the source before publishing.
 
-Contact information and other experience claims come from the supplied page and have not been independently verified. Review public personal details before merging. Other project cards still point to the GitHub profile because no specific repositories were supplied. The page describes Cybersecurity studies; confirm that wording matches your preferred current programme title.
+## Project descriptions
 
-## Validation and limits
+Link project cards to their exact source, guide or demo. For work without public source, say so instead of using a generic profile link labelled GitHub. Keep completed work, working features and planned improvements distinct. Update public biography details only from the maintainer's information.
 
-Checked inline JavaScript syntax, local project links and the corrected IMS claim. Browser layout, keyboard navigation, mailto behaviour and Pages deployment still require a live preview. No analytics, contact database or email delivery service is implemented.
+## Repository separation
+
+Cyber Hygiene currently shares this repository and Pages origin. The requested standalone repository is being prepared from the app's Git history. Until that migration is published, this folder remains the live source. Preserve the working URL and do not remove its files before a verified replacement is deployed.
+
+Separate repositories improve ownership, issue tracking and releases. They do not isolate browser storage on GitHub Pages: projects under the same `josephchitalu2.github.io` origin share its storage boundary. Moving domains would require a separate data-migration design.
