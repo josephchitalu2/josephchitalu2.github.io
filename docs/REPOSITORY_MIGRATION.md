@@ -1,63 +1,42 @@
-# Independent project repository migration plan
+# Project repository map and migration plan
 
-**Status:** proposal, not a completed migration. Do not move or delete live website directories until independent repositories exist and the published URLs have been tested.
+## Repositories in use
 
-## Current state (November 2026)
+| Repository | Current scope |
+| --- | --- |
+| josephchitalu2.github.io | Live portfolio and existing GitHub Pages project paths |
+| INVENTORY-MANAGEMENT-SYSTEM- | v5.0 CLI source and regression tests; web PR #3 remains separate |
+| chitalu-business-automation | Operations architecture and API design; implementation pending |
+| chitalu-security-operations | Security operations architecture and release requirements |
+| chitalu-analysis-lab | Tested static triage, benign exercises and isolated-lab documentation |
 
-The `josephchitalu2.github.io` repo currently hosts the portfolio, Cyber Hygiene web demo, Cyber Hygiene Firefox extension, ZescoLoad-Track, and Starbound Drift. The CLI inventory application already has its own repository. The newer Flask POS is separate work and **is not the same as the CLI application**.
+All five repositories have README documentation. The three Chitalu product repositories were created and populated on 10 November 2026. Source publication and application deployment are separate milestones.
 
-## Target repositories
+## Existing live projects awaiting extraction
 
-| Proposed repository | Current source | Focus |
-| --- | --- | --- |
-| `cyber-hygiene-platform` | `cyber-hygiene/` | Awareness app, demo accounts, encrypted classroom vault |
-| `cyber-hygiene-firefox-extension` | `cyber-hygiene-extension/` | TLS observation and optional k-anonymous password exposure checks |
-| `zesco-load-track` | `zesco-load-track/` | Local household load/runtime simulator |
-| `starbound-drift` | `games/starbound-drift/` | Browser game |
-| `python-pos-inventory` | Existing local Flask POS project, once verified | Sales, shifts, roles, SQLite persistence |
-| `network-security-labs` | New project | Permission-based packet capture analysis, defensive exercises |
-| `python-log-analyzer` | New project | Offline parsing, detection rules, synthetic security logs |
+| Intended repository | Current source |
+| --- | --- |
+| cyber-hygiene-platform | cyber-hygiene/ |
+| cyber-hygiene-firefox-extension | cyber-hygiene-extension/ |
+| zesco-load-track | zesco-load-track/ |
+| starbound-drift | games/starbound-drift/ |
 
-Do not publish the SID Media assessment's detailed findings or private evidence. The existing [public overview](SID_MEDIA_ASSESSMENT.md) is the appropriate public reference unless disclosure is authorized.
+These extractions are not complete. Preserve the working Pages paths, test relative assets and links, and verify replacement deployments before replacing old code with compatibility pages or redirects. Shared GitHub Pages origins still share a browser storage boundary; separate repositories alone do not isolate storage.
 
-## Safe migration checklist
+The separate local Flask POS and UNILUS Connect browser workspace are not implemented by this portfolio repository. They need their own verified source and release workflow.
 
-1. Create an independent empty repository, with a clear name, description and appropriate visibility.
-2. Copy only that project's source, tests, synthetic assets and documentation. Inspect for secrets, tokens, live databases, real customer data and internal organization details before publishing.
-3. Add `README.md`, `docs/ARCHITECTURE.md`, `docs/TESTING.md`, `SECURITY.md`, `.gitignore`, and CI checks. Add a license only when ownership and third-party rights are clear.
-4. Keep the original GitHub Pages URLs working during migration. Update relative paths, links, and Pages configuration for the new repository location.
-5. Run tests, smoke-check a deployed preview, check Firefox extension distribution paths (where relevant), and verify links from mobile and desktop.
-6. Update portfolio links to the independent repositories. Retain old paths as redirects or documented compatibility copies until the new locations are confirmed.
-7. After a stable release, remove duplicate application code from the portfolio in a separate reviewed change. Do not remove old assets or history blindly.
+## Migration procedure
 
-## Default repository structure
+Create the destination, preserve the relevant source/history where practical, copy tests and synthetic assets, document setup and deployment, review privacy and licensing, then test and publish. Update portfolio links after the new destination works. Remove duplicate application code only in a focused change after compatibility is verified.
 
-```text
-project-name/
-├── README.md
-├── .gitignore
-├── SECURITY.md
-├── CONTRIBUTING.md
-├── src/                 # Or existing framework-appropriate source layout
-├── tests/
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── TESTING.md
-│   └── ROADMAP.md
-└── .github/workflows/
-    └── checks.yml
-```
+Keep README, architecture, testing, security and contribution guides in each standalone project. Add CI for the checks that actually exist; documentation-only checks must not be described as application tests.
 
-Use a smaller structure when a project genuinely does not need a directory; avoid placeholder files. Every README should state purpose, requirements, local start commands, tests, current feature boundaries, privacy/security assumptions, and deployment or demo status.
+## Scope and ownership
 
-## Defensive security project standards
+The current laptop does not define product scope. Choose infrastructure and tools to fit the required work, with separate development and deployment resource profiles. Track full release goals in explicit milestones.
 
-- Use synthetic logs, locally generated test packets, or explicitly authorized lab captures.
-- Do not commit live credentials, browser history, packet captures with private traffic, full vulnerability reports, access tokens, or private customer data.
-- Include a threat model and limitations in the documentation. A green CI badge is not proof of security.
-- Favor interpretable detections with sample data, tests, and false-positive notes instead of exaggerated detection guarantees.
-- Prefer simple Python standard-library tools compatible with a low-memory Linux machine.
+Publish source, synthetic fixtures and authorized public summaries. Private case evidence, credentials, customer records and detailed SID Media findings stay outside public repositories. The [public assessment overview](SID_MEDIA_ASSESSMENT.md) remains the public reference.
 
-## Migration constraints
+## Branch cleanup
 
-Creating repositories requires a repository-creation-capable GitHub connection or the user's GitHub interface. Until that is available, this document is a plan only. Existing directories and deployments remain untouched.
+Main history and open work are retained. The IMS web-deployment PR remains pending; merged or historical branches should only be removed after their relationship to main and open work is checked. No history rewrite is part of this restructuring.

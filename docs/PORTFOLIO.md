@@ -38,6 +38,10 @@ Link project cards to their exact source, guide or demo. For work without public
 
 ## Repository separation
 
-Cyber Hygiene currently shares this repository and Pages origin. The requested standalone repository is being prepared from the app's Git history. Until that migration is published, this folder remains the live source. Preserve the working URL and do not remove its files before a verified replacement is deployed.
+Cyber Hygiene currently shares this repository and Pages origin. A standalone repository and history extraction are planned. Until that migration is published, this folder remains the live source. Preserve the working URL and do not remove its files before a verified replacement is deployed.
 
 Separate repositories improve ownership, issue tracking and releases. They do not isolate browser storage on GitHub Pages: projects under the same `josephchitalu2.github.io` origin share its storage boundary. Moving domains would require a separate data-migration design.
+
+## Related Chitalu repositories
+
+[Business Automation](https://github.com/josephchitalu2/chitalu-business-automation), [Security Operations](https://github.com/josephchitalu2/chitalu-security-operations) and [Analysis Lab](https://github.com/josephchitalu2/chitalu-analysis-lab) now have separate repositories. Their existence does not migrate the existing Pages applications. The IMS download is synchronized with the current canonical CLI source, including its brand and regression fixes.

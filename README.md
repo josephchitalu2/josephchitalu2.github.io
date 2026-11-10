@@ -1,6 +1,6 @@
 # Joseph Chitalu · Portfolio & Projects
 
-Cybersecurity student at the University of Lusaka, building practical tools for security awareness, inventory workflows and household power planning.
+Cybersecurity student at the University of Lusaka, building practical tools for security awareness, inventory workflows and household power planning under Chitalu Software Solutions.
 
 [Visit the portfolio](https://josephchitalu2.github.io/) · [Report a bug](https://github.com/josephchitalu2/josephchitalu2.github.io/issues)
 
@@ -14,6 +14,9 @@ Cybersecurity student at the University of Lusaka, building practical tools for 
 | Starbound Drift | [Play](https://josephchitalu2.github.io/games/starbound-drift/) | [Controls & architecture](docs/STARBOUND_DRIFT.md) | Keyboard/mouse space-game prototype |
 | Inventory Management System | [Separate repository](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-) | [Technical documentation](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-/blob/main/docs/TECHNICAL.md) | Python CLI / SQLite prototype |
 | SID Media assessment | [Public overview](docs/SID_MEDIA_ASSESSMENT.md) | Evidence summary; private report excluded | Completed assessment project |
+| Chitalu Business Automation | [Repository](https://github.com/josephchitalu2/chitalu-business-automation) | Architecture and API design | Design baseline; application implementation pending |
+| Chitalu Security Operations | [Repository](https://github.com/josephchitalu2/chitalu-security-operations) | Telemetry and release architecture | Design baseline; no deployed protection |
+| Chitalu Analysis Lab | [Repository](https://github.com/josephchitalu2/chitalu-analysis-lab) | Triage, exercises and lab workflow | Working static tool; VM provisioning pending |
 
 ## Run locally
 
