@@ -1,6 +1,6 @@
 # Project repository map and migration plan
 
-## Repositories in use
+## Public project repositories
 
 | Repository | Current scope |
 | --- | --- |
@@ -10,7 +10,7 @@
 | chitalu-security-operations | Security operations architecture and release requirements |
 | chitalu-analysis-lab | Tested static triage, benign exercises and isolated-lab documentation |
 
-All five repositories have README documentation. The three Chitalu product repositories were created and populated on 10 November 2026. Source publication and application deployment are separate milestones.
+This map covers the public portfolio projects and their source. The status column describes what each repository contains today.
 
 ## Existing live projects awaiting extraction
 
@@ -31,12 +31,10 @@ Create the destination, preserve the relevant source/history where practical, co
 
 Keep README, architecture, testing, security and contribution guides in each standalone project. Add CI for the checks that actually exist; documentation-only checks must not be described as application tests.
 
-## Scope and ownership
-
-The current laptop does not define product scope. Choose infrastructure and tools to fit the required work, with separate development and deployment resource profiles. Track full release goals in explicit milestones.
+## What belongs in public source
 
 Publish source, synthetic fixtures and authorized public summaries. Private case evidence, credentials, customer records and detailed SID Media findings stay outside public repositories. The [public assessment overview](SID_MEDIA_ASSESSMENT.md) remains the public reference.
 
-## Branch cleanup
+## Branch maintenance
 
-Main history and open work are retained. The IMS web-deployment PR remains pending; merged or historical branches should only be removed after their relationship to main and open work is checked. No history rewrite is part of this restructuring.
+Before removing a branch, verify that its changes are on the default branch and that no open work still uses it. Review the [IMS web demo proposal](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-/pull/3) separately.

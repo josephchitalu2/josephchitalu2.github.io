@@ -8,15 +8,15 @@ Cybersecurity student at the University of Lusaka, building practical tools for 
 
 | Project | Try it | Source & documentation | Status |
 | --- | --- | --- | --- |
-| Cyber Hygiene | [Open the app](https://josephchitalu2.github.io/cyber-hygiene/) | [App guide](cyber-hygiene/README.md) | Student awareness platform; encrypted local vault |
+| Cyber Hygiene | [Open the app](https://josephchitalu2.github.io/cyber-hygiene/) | [App guide](cyber-hygiene/README.md) · [Team demo](cyber-hygiene/WALKTHROUGH.md) | Student awareness platform; encrypted local vault |
 | Cyber Hygiene Firefox extension | [Download](downloads/cyber-hygiene-extension.zip) | [Installation & privacy](cyber-hygiene-extension/README.md) | Temporary Firefox developer add-on |
 | ZescoLoad-Track | [Open simulator](https://josephchitalu2.github.io/zesco-load-track/) | [Guide](zesco-load-track/README.md) | Household load and runtime estimates |
 | Starbound Drift | [Play](https://josephchitalu2.github.io/games/starbound-drift/) | [Controls & architecture](docs/STARBOUND_DRIFT.md) | Keyboard/mouse space-game prototype |
 | Inventory Management System | [Separate repository](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-) | [Technical documentation](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-/blob/main/docs/TECHNICAL.md) | Python CLI / SQLite prototype |
 | SID Media assessment | [Public overview](docs/SID_MEDIA_ASSESSMENT.md) | Evidence summary; private report excluded | Completed assessment project |
-| Chitalu Business Automation | [Repository](https://github.com/josephchitalu2/chitalu-business-automation) | Architecture and API design | Design baseline; application implementation pending |
-| Chitalu Security Operations | [Repository](https://github.com/josephchitalu2/chitalu-security-operations) | Telemetry and release architecture | Design baseline; no deployed protection |
-| Chitalu Analysis Lab | [Repository](https://github.com/josephchitalu2/chitalu-analysis-lab) | Triage, exercises and lab workflow | Working static tool; VM provisioning pending |
+| Chitalu Business Automation | [Repository](https://github.com/josephchitalu2/chitalu-business-automation) | [Architecture and API design](https://github.com/josephchitalu2/chitalu-business-automation/tree/main/docs) | Design baseline; application implementation pending |
+| Chitalu Security Operations | [Repository](https://github.com/josephchitalu2/chitalu-security-operations) | [Telemetry and release design](https://github.com/josephchitalu2/chitalu-security-operations/tree/main/docs) | Design baseline; no deployed protection |
+| Chitalu Analysis Lab | [Repository](https://github.com/josephchitalu2/chitalu-analysis-lab) | [Triage and lab workflow](https://github.com/josephchitalu2/chitalu-analysis-lab/tree/main/docs) | Working static tool; VM provisioning pending |
 
 ## Run locally
 

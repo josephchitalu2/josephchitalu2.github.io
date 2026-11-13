@@ -19,7 +19,7 @@ Serve the repository root using the command in [README](../README.md), then foll
 
 ## Deployment
 
-The site is published through GitHub Pages. The password-manager update in PR #3 was merged and its Pages build completed successfully on 7 November 2026. Before changing publishing settings, inspect Settings → Pages rather than assuming a branch or folder.
+GitHub Pages publishes the site. Before changing publishing settings, check the source branch and folder under **Settings → Pages**. The [Cyber Hygiene walkthrough](../cyber-hygiene/WALKTHROUGH.md) covers the Add account flow and other features to verify after a release.
 
 1. Make a focused branch and run the documented checks.
 2. Open a pull request describing behaviour, validation and limitations.

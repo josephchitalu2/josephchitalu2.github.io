@@ -3,7 +3,9 @@
 A static student cyber-awareness demo published through GitHub Pages.
 
 ## Run
-Open index.html with its adjacent files in a modern browser, or visit the GitHub Pages URL. No dependency installation or build is required.
+Open the [live demo](https://josephchitalu2.github.io/cyber-hygiene/), or start the local preview from the portfolio root. Use HTTPS or localhost for account sign-in and the vault. No dependency installation or build is required.
+
+For a team demo, follow the [code and feature walkthrough](WALKTHROUGH.md).
 
 ## Design source
 The original Cyber Hygiene Figma file is 9TESNt9v6DWKsO8kauvMdC.
