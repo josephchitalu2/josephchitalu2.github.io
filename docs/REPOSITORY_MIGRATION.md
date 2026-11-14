@@ -4,11 +4,11 @@
 
 | Repository | Current scope |
 | --- | --- |
-| josephchitalu2.github.io | Live portfolio and existing GitHub Pages project paths |
-| INVENTORY-MANAGEMENT-SYSTEM- | v5.0 CLI source and regression tests; web PR #3 remains separate |
-| chitalu-business-automation | Operations architecture and API design; implementation pending |
-| chitalu-security-operations | Security operations architecture and release requirements |
-| chitalu-analysis-lab | Tested static triage, benign exercises and isolated-lab documentation |
+| [josephchitalu2.github.io](../README.md) | Live portfolio and existing GitHub Pages project paths |
+| [INVENTORY-MANAGEMENT-SYSTEM-](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-) | v5.0 CLI source and regression tests. Flask demo remains in PR #3. |
+| [chitalu-business-automation](https://github.com/josephchitalu2/chitalu-business-automation) | Operations architecture and API design |
+| [chitalu-security-operations](https://github.com/josephchitalu2/chitalu-security-operations) | Synthetic sign-in replay, local MCP server and telemetry design |
+| [chitalu-analysis-lab](https://github.com/josephchitalu2/chitalu-analysis-lab) | Tested static triage, benign exercises and isolated-lab documentation |
 
 This map covers the public portfolio projects and their source. The status column describes what each repository contains today.
 
