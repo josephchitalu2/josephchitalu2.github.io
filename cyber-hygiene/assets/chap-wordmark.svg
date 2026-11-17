@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 64">
+  <symbol id="wordmark" viewBox="0 0 576 64" fill-rule="evenodd">
+    <path d="M12 0h38l12 12v11H47v-4l-5-5H20l-5 5v26l5 5h22l5-5v-4h15v11L50 64H12L0 52V12Z"/>
+    <path transform="translate(66)" d="M0 0h16v24h24V0h16v64H40V40H16v24H0Z"/>
+    <path transform="translate(126)" d="M25 0h18l25 64H51l-5-13H22l-5 13H0Zm2 38h14L34 18Z"/>
+    <path transform="translate(198)" d="M0 0h46l12 12v24L46 48H16v16H0Zm16 15v18h23l4-4V19l-4-4Z"/>
+    <path transform="translate(271)" d="M0 4h35l10 10v20L35 44H9v20H0Zm9 9v22h22l5-5V18l-5-5Z"/>
+    <path transform="translate(321)" d="M0 4h9v60H0Z"/>
+    <path transform="translate(335)" d="M5 21h25l11 11v32H10L0 54V43l10-10h22l-4-4H5l-4-4Zm8 20-4 4v6l4 4h19V41Z"/>
+    <path transform="translate(382)" d="M7 10h9v11h14v8H16v21l6 6h8v8H18L7 53V29H0v-8h7Z"/>
+    <path transform="translate(415)" d="M16 4h15v9H20l-4 4v4h15v8H16v35H7V29H0v-8h7v-8Z"/>
+    <path transform="translate(450)" d="M11 21h21l11 11v21L32 64H11L0 53V32Zm4 9-6 6v13l6 6h13l6-6V36l-6-6Z"/>
+    <path transform="translate(498)" d="M10 21h15v9H14l-5 5v29H0V31Z"/>
+    <path transform="translate(528)" d="M10 21h10l4 4 4-4h10l10 10v33h-9V35l-5-5h-3l-3 3v31h-8V33l-3-3h-3l-5 5v29H0V31Z"/>
+  </symbol>
+</svg>

@@ -9,7 +9,7 @@
 <link rel="icon" href="assets/chap-shield.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css?v=8">
 <link rel="stylesheet" href="fonts.css?v=8">
-<link rel="stylesheet" href="figma.css?v=8">
+<link rel="stylesheet" href="figma.css?v=9">
 <link rel="stylesheet" href="vault.css?v=8">
 </head>
 <body>
@@ -17,7 +17,10 @@
 <dialog id="workspace-menu" class="workspace-dialog" aria-label="Workspace menu">
 <aside class="sidebar">
 <div class="drawerheading"><span>YOUR WORKSPACE</span><button type="button" class="drawerclose" data-menu-close aria-label="Close workspace menu">×</button></div>
-<a class="brand" href="#home"><img src="assets/chap-shield.svg" alt="" width="28" height="28"> <span>CHAP <span class="mint">Platform</span></span></a>
+<a class="brand" href="#home" aria-label="CHAP Platform home">
+<img src="assets/chap-shield.svg" alt="" width="28" height="28">
+<svg class="chap-wordmark" viewBox="0 0 576 64" width="172" height="19" aria-hidden="true" focusable="false"><use href="assets/chap-wordmark.svg#wordmark"></use></svg>
+</a>
 <div class="navlabel">YOUR WORKSPACE</div>
 <nav aria-label="Main navigation">
 <a href="#account" data-nav="account">My Account</a>
@@ -29,6 +32,7 @@
 <a href="#training" data-nav="training">Cyber Training Awareness</a>
 <a href="#progress" data-nav="progress">Learning Progress</a>
 </nav>
+<p class="workspace-tagline">Building a safer digital community</p>
 <div class="sidebottom"><button class="btn logoutbtn" data-logout>LOG OUT</button><div class="safetip"><span class="mint">✦ DAILY REMINDER</span><p>A familiar name doesn’t always mean a safe message.</p></div><a href="#account" class="profile"><span class="avatar" id="avatar">A</span><span id="profilename">Alex<small>Student workspace</small></span><span>↗</span></a></div>
 </aside>
 </dialog>
@@ -43,6 +47,6 @@
 <script src="vault.js?v=8"></script>
 <script src="vault-ui.js?v=8"></script>
 <script src="guidelines.js?v=8"></script>
-<script src="app.js?v=10"></script>
+<script src="app.js?v=11"></script>
 <script src="menu.js?v=8"></script>
 </body></html>
