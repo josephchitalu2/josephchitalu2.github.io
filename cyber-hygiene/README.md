@@ -1,6 +1,8 @@
-# Cyber Hygiene
+# CHAP Platform
 
-A static student cyber-awareness demo published through GitHub Pages.
+Cyber Hygiene Awareness & Protection. Building a safer digital community through short, practical lessons and realistic scenarios.
+
+A static student cyber-awareness app published through GitHub Pages.
 
 ## Run
 Open the [live demo](https://josephchitalu2.github.io/cyber-hygiene/), or start the local preview from the portfolio root. Use HTTPS or localhost for account sign-in and the vault. No dependency installation or build is required.
@@ -52,7 +54,7 @@ A forgotten master passphrase cannot be recovered. Clearing browser data destroy
 
 ### Password storage navigation
 
-My Account → Password storage → Add account opens the Password Manager entry form. View saved passwords opens the vault list. Creating another Cyber Hygiene profile is a separately labelled action.
+My Account → Password storage → Add account opens the Password Manager entry form. View saved passwords opens the vault list. Creating another CHAP profile is a separately labelled action.
 
 Guests sign in or create a profile first, then return to the requested vault page. On Add account, creating or unlocking the vault continues to the entry form. Saving stores the encrypted entry and shows it in Saved passwords.
 
