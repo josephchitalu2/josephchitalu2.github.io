@@ -1,0 +1,14 @@
+{
+  "name": "chap-platform",
+  "compatibility_date": "2026-11-18",
+  "workers_dev": true,
+  "preview_urls": false,
+  "build": {
+    "command": "node scripts/build-chap-cloudflare.mjs",
+    "watch_dir": ["cyber-hygiene", "scripts/build-chap-cloudflare.mjs"]
+  },
+  "assets": {
+    "directory": "./dist/chap-platform",
+    "not_found_handling": "none"
+  }
+}

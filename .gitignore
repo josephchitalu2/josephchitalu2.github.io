@@ -10,3 +10,7 @@ node_modules/
 *.sqlite3
 *.log
 .DS_Store
+.wrangler/
+.dev.vars
+.dev.vars.*
+dist/
