@@ -2,10 +2,12 @@
 
 Cyber Hygiene Awareness & Protection. Building a safer digital community through short, practical lessons and realistic scenarios.
 
-A static cyber-awareness app for practical learning and community training, currently published through GitHub Pages. Cloudflare Workers hosting is configured separately; see the [deployment guide](CLOUDFLARE.md).
+A static cyber-awareness app for practical learning and community training, now published on Cloudflare Workers. See the [deployment guide](CLOUDFLARE.md) for updates and optional automatic deployment from GitHub.
 
 ## Run
-Open the [live app](https://josephchitalu2.github.io/cyber-hygiene/), or start the local preview from the portfolio root. Use HTTPS or localhost for account sign-in and the vault. No application dependency installation or build is required.
+Open the [live app on Cloudflare](https://chap-platform.chitalu-zm.workers.dev/), or start the local preview from the portfolio root. Use HTTPS or localhost for account sign-in and the vault. No application dependency installation or build is required.
+
+The [original GitHub Pages version](https://josephchitalu2.github.io/cyber-hygiene/) remains available for profiles and practice records saved at that address. Browser data does not automatically transfer to Cloudflare.
 
 For a team demo, follow the [code and feature walkthrough](WALKTHROUGH.md).
 

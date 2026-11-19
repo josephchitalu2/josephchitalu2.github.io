@@ -1,6 +1,12 @@
 # CHAP Platform on Cloudflare
 
-The source stays in `josephchitalu2/josephchitalu2.github.io`, under `cyber-hygiene/`. Cloudflare can serve CHAP as its own static Worker named `chap-platform`. This configuration is ready for deployment; it does not establish that a Cloudflare URL is live. GitHub Pages remains available during the transition.
+The source stays in `josephchitalu2/josephchitalu2.github.io`, under `cyber-hygiene/`. CHAP is live at [chap-platform.chitalu-zm.workers.dev](https://chap-platform.chitalu-zm.workers.dev/), served by the static Worker `chap-platform`. GitHub Pages remains available during the transition.
+
+## Deployment record — 19 November 2026
+
+Wrangler reported a successful deployment of 31 assets, version `788126ee-3d9b-400c-af30-b8b72afb28c4`. The live sign-in page rendered, and browser checks confirmed guest access to the dashboard, the workspace menu with its green tagline, and navigation to the training hub. Sign-up, password sign-in, quizzes, progress persistence and vault flows have not yet been rechecked in the live Cloudflare browser session. Git integration for automatic deployments remains a separate setup step.
+
+The portfolio launch link now uses Cloudflare. The original GitHub Pages app remains available for browser data saved on its origin.
 
 ## Deployment
 

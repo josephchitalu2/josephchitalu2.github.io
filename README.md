@@ -8,7 +8,7 @@ Cybersecurity student at the University of Lusaka, building practical tools for 
 
 | Project | Try it | Source & documentation | Status |
 | --- | --- | --- | --- |
-| Cyber Hygiene | [Open the app](https://josephchitalu2.github.io/cyber-hygiene/) | [App guide](cyber-hygiene/README.md) · [Team demo](cyber-hygiene/WALKTHROUGH.md) | Student awareness platform; encrypted local vault |
+| CHAP Platform | [Open the app](https://chap-platform.chitalu-zm.workers.dev/) | [App guide](cyber-hygiene/README.md) · [Team demo](cyber-hygiene/WALKTHROUGH.md) | Student awareness platform; encrypted local vault |
 | Cyber Hygiene Firefox extension | [Download](downloads/cyber-hygiene-extension.zip) | [Installation & privacy](cyber-hygiene-extension/README.md) | Temporary Firefox developer add-on |
 | ZescoLoad-Track | [Open simulator](https://josephchitalu2.github.io/zesco-load-track/) | [Guide](zesco-load-track/README.md) | Household load and runtime estimates |
 | Starbound Drift | [Play](https://josephchitalu2.github.io/games/starbound-drift/) | [Controls & architecture](docs/STARBOUND_DRIFT.md) | Keyboard/mouse space-game prototype |

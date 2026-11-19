@@ -23,7 +23,7 @@ This map covers the public portfolio projects and their source. The status colum
 
 These extractions are not complete. Preserve the working Pages paths, test relative assets and links, and verify replacement deployments before replacing old code with compatibility pages or redirects. Shared GitHub Pages origins still share a browser storage boundary; separate repositories alone do not isolate storage.
 
-CHAP Platform has a [Cloudflare Workers deployment configuration and transition guide](../cyber-hygiene/CLOUDFLARE.md). Its source remains in `cyber-hygiene/` until extraction is completed. The guide covers browser-local data, manual deployment and optional Git integration. The configuration does not itself publish a Worker, replace the Pages URL or change other projects' hosting.
+CHAP Platform is [live on Cloudflare Workers](https://chap-platform.chitalu-zm.workers.dev/); its [deployment and transition guide](../cyber-hygiene/CLOUDFLARE.md) records the first deployment on 19 November 2026. Its source remains in `cyber-hygiene/` until extraction is completed. The portfolio now launches the Cloudflare app. The original Pages app stays available for browser-local data saved there; records do not transfer automatically between origins. Automatic deployment from GitHub still requires connecting the Worker to this repository.
 
 The separate local Flask POS and UNILUS Connect browser workspace are not implemented by this portfolio repository. They need their own verified source and release workflow.
 
