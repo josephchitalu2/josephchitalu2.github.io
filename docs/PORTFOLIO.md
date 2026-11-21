@@ -30,7 +30,9 @@ A browser can retain old assets. Bump query-string asset versions when changing 
 
 ## Distribution copies
 
-`downloads/ims.py` is a snapshot of the separate IMS repository, not an independent source of truth. Update it deliberately when the canonical IMS source changes. Regenerate `downloads/cyber-hygiene-extension.zip` when changing distributed extension files; compare its contents with the source before publishing.
+The [inventory download workflow](../.github/workflows/sync-ims.yml) checks the canonical inventory CLI every Monday at 19:15 Africa/Lusaka and supports a manual run from Actions. When the files differ, it runs the inventory tests and copies that exact source revision to `downloads/ims.py`. Commits use the GitHub Actions bot identity. A matching file leaves the repository untouched. If branch rules reject a push, review the Actions log and sync the tested file through a pull request.
+
+GitHub Pages branch publishing may wait for a normal maintainer push after an automated commit. Check the public download after the next Pages deployment. Regenerate `downloads/cyber-hygiene-extension.zip` when changing distributed extension files and compare its contents with the source before publishing.
 
 ## Project descriptions
 
