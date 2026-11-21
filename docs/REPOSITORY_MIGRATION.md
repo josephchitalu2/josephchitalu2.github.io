@@ -5,7 +5,7 @@
 | Repository | Current scope |
 | --- | --- |
 | [josephchitalu2.github.io](../README.md) | Live portfolio and existing GitHub Pages project paths |
-| [INVENTORY-MANAGEMENT-SYSTEM-](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-) | v5.0 CLI source and regression tests. Flask demo remains in PR #3. |
+| [INVENTORY-MANAGEMENT-SYSTEM-](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-) | v5.0 SQLite CLI, Flask browser demo and regression tests on `main`. See the [demo setup](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-#browser-demo). |
 | [chitalu-business-automation](https://github.com/josephchitalu2/chitalu-business-automation) | Operations architecture and API design |
 | [chitalu-security-operations](https://github.com/josephchitalu2/chitalu-security-operations) | Synthetic sign-in replay, local MCP server and telemetry design |
 | [chitalu-analysis-lab](https://github.com/josephchitalu2/chitalu-analysis-lab) | Tested static triage, benign exercises and isolated-lab documentation |
@@ -39,4 +39,4 @@ Publish source, synthetic fixtures and authorized public summaries. Private case
 
 ## Branch maintenance
 
-Before removing a branch, verify that its changes are on the default branch and that no open work still uses it. Review the [IMS web demo proposal](https://github.com/josephchitalu2/INVENTORY-MANAGEMENT-SYSTEM-/pull/3) separately.
+Before removing a branch, verify that its changes are on the default branch and check for open pull requests and deployment dependencies.
